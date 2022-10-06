@@ -3,8 +3,8 @@
 I used my knowledge of Swift language to read and explain the example of this book.
 
 ### Table of contents
-- [8. Blazing Fast Lookup with Hash Tables](https://github.com/KaoWenChung/Data-Structures-and-Algorithms#8-blazing-fast-lookup-with-hash-tables)
-- [9. Crafting Elegant Code with Stacks and Queues](https://github.com/KaoWenChung/Data-Structures-and-Algorithms#8-Crafting Elegant-Code-with-Stacks-and-Queues)
+8. [Blazing Fast Lookup with Hash Tables](https://github.com/KaoWenChung/Data-Structures-and-Algorithms#8-blazing-fast-lookup-with-hash-tables)
+9. [Crafting Elegant Code with Stacks and Queues](https://github.com/KaoWenChung/Data-Structures-and-Algorithms#8-Crafting-Elegant-Code-with-Stacks-and-Queues)
 
 # 8. Blazing Fast Lookup with Hash Tables
 ## Hash Tables for Organization
