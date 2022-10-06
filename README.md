@@ -9,7 +9,7 @@ I used my knowledge of Swift language to read and explain the example of this bo
 
 # 8. Blazing Fast Lookup with Hash Tables
 ## Hash Tables for Organization
-As I know the Hash table in Swift is Dictionary Type. It's a key value pairs data type which is useful for many scenarios. We can use key to find the specific value. For example the political candidates and the number of votes each receives.
+As I know the Hash table in Swift is Dictionary Type. It's a key value pairs data type which is useful for many scenarios. We can use key to find the specific value. For example the political candidates and the number of votes each receives.<br/>
 Another example is common HTTP status, we can define a function and return the meaning of the status code.
 ```
 func statusCode(_ code: Int) -> String? {
@@ -72,7 +72,7 @@ func isSubset(array1: [String], array2: [String]) -> Bool {
   return true
 }
 ```
-In this case the big O will be O(N * M).
+In this case the big O will be O(N * M).<br/>
 We can use hash table to improve this function.
 ```
 func isSubset(array1: [String], array2: [String]) -> Bool {
@@ -101,7 +101,7 @@ func isSubset(array1: [String], array2: [String]) -> Bool {
 }
 
 ```
-If we say that the N is total number of items of both arrays combined. Then we can say the big O is O(N)
+If we say that the N is total number of items of both arrays combined. Then we can say the big O is O(N)<br/>
 Stacks and Queues are the data types we use to store temporary data
 # 9. Crafting Elegant Code with Stacks and Queues
 ## Stacks
@@ -141,11 +141,11 @@ func blah() {
 }
 ```
 ## Reading Recursive Code
-Take calculating factorials as an example, factorials is like:
-factorial of 3 is:
-3 * 2 * 1 = 6
-factorial of 4 is:
-4 * 3 * 2 * 1 = 24
+Take calculating factorials as an example, factorials is like:<br/>
+factorial of 3 is:<br/>
+3 * 2 * 1 = 6<br/>
+factorial of 4 is:<br/>
+4 * 3 * 2 * 1 = 24<br/>
 So we can write the function as below:
 ```
 func factorial(_ number: Int) {
