@@ -4,7 +4,8 @@ I used my knowledge of Swift language to read and explain the example of this bo
 
 ### Table of contents
 8. [Blazing Fast Lookup with Hash Tables](https://github.com/KaoWenChung/Data-Structures-and-Algorithms#8-blazing-fast-lookup-with-hash-tables)
-9. [Crafting Elegant Code with Stacks and Queues](https://github.com/KaoWenChung/Data-Structures-and-Algorithms#8-Crafting-Elegant-Code-with-Stacks-and-Queues)
+9. [Crafting Elegant Code with Stacks and Queues](https://github.com/KaoWenChung/Data-Structures-and-Algorithms#9-crafting-elegant-code-with-stacks-and-queues)
+10. [Recursively Recurse with Recursion](https://github.com/KaoWenChung/Data-Structures-and-Algorithms#9-recursively-recurse-with-recursion)
 
 # 8. Blazing Fast Lookup with Hash Tables
 ## Hash Tables for Organization
@@ -125,6 +126,33 @@ struct Stack<T> {
 
     mutating func pop() {
         stackData.popLast()
+    }
+}
+```
+# 10. Recursively Recurse with Recursion
+Recursion is the term for a function calling itself. We need a base case to stop the recursive function in case it infinitely repeats itself.
+```
+var blahTime: Int = 10
+
+func blah() {
+  guard blahTime != 0 else { return }
+  blahTime -= 1
+  blah()
+}
+```
+## Reading Recursive Code
+Take calculating factorials as an example, factorials is like:
+factorial of 3 is:
+3 * 2 * 1 = 6
+factorial of 4 is:
+4 * 3 * 2 * 1 = 24
+So we can write the function as below:
+```
+func factorial(_ number: Int) {
+    if nubmer == 1 {
+        return 1
+    } else {
+        return number * factorial(number - 1)
     }
 }
 ```
