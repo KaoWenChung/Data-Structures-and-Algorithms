@@ -2,6 +2,10 @@
 > This is the study record of - "A Common-Sense Guide to Data Structures and Algorithms Level Up Your Core Programming Skills by Jay Wengrow"
 I used my knowledge of Swift language to read and explain the example of this book.
 
+### Table of contents
+- [8. Blazing Fast Lookup with Hash Tables](https://github.com/KaoWenChung/Data-Structures-and-Algorithms#8-blazing-fast-lookup-with-hash-tables)
+- [9. Crafting Elegant Code with Stacks and Queues](https://github.com/KaoWenChung/Data-Structures-and-Algorithms#8-Crafting Elegant-Code-with-Stacks-and-Queues)
+
 # 8. Blazing Fast Lookup with Hash Tables
 ## Hash Tables for Organization
 As I know the Hash table in Swift is Dictionary Type. It's a key value pairs data type which is useful for many scenarios. We can use key to find the specific value. For example the political candidates and the number of votes each receives.
@@ -34,7 +38,7 @@ let statusCodeDict: [Int: String] = [
   500: "Internal Server Error"
 ]
 ```
-# Hash Tables for Speed
+## Hash Tables for Speed
 If we want to search a number in an unordered Int array, we must use linear search. Therefore, the big O notation would be O(N). Instead of searching a number in an array, we can use dictionary pairs number key with Boolean value true. If we want to search the number in a hash table data. It will only take one step. Big O will be O(1).
 
 ## Array Subset
