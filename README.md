@@ -160,4 +160,7 @@ func factorial(_ number: Int) {
 When we use the recursive function, we should be careful about the unnecessary call. A recursive function is a function that calls itself. If we call itself many times in itself, when we analyze its big O. We will find there is a big problem with it.
 
 ## The Little Fix for Big O
-We should try our best to minimize the times a recursive function calls itself. For example, we can declare a property to store the value of the function instead of duplicate calling itself. 
+We should try our best to minimize the times a recursive function calls itself. For example, we can declare a property to store the value of the function instead of duplicate calling itself.
+
+* When a problem is solved by solving smaller versions of the same problem,
+the smaller problem is called a subproblem.
