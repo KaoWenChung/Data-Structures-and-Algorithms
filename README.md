@@ -162,5 +162,5 @@ When we use the recursive function, we should be careful about the unnecessary c
 ## The Little Fix for Big O
 We should try our best to minimize the times a recursive function calls itself. For example, we can declare a property to store the value of the function instead of duplicate calling itself.
 
-* When a problem is solved by solving smaller versions of the same problem,
+:+1:When a problem is solved by solving smaller versions of the same problem,
 the smaller problem is called a subproblem.
