@@ -6,6 +6,7 @@ I used my knowledge of Swift language to read and explain the example of this bo
 8. [Blazing Fast Lookup with Hash Tables](https://github.com/KaoWenChung/Data-Structures-and-Algorithms#8-blazing-fast-lookup-with-hash-tables)
 9. [Crafting Elegant Code with Stacks and Queues](https://github.com/KaoWenChung/Data-Structures-and-Algorithms#9-crafting-elegant-code-with-stacks-and-queues)
 10. [Recursively Recurse with Recursion](https://github.com/KaoWenChung/Data-Structures-and-Algorithms#9-recursively-recurse-with-recursion)
+12. [Dynamic Programming](https://github.com/KaoWenChung/Data-Structures-and-Algorithms#12-dynamic-programming)
 
 # 8. Blazing Fast Lookup with Hash Tables
 ## Hash Tables for Organization
