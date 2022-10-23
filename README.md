@@ -167,3 +167,14 @@ We should try our best to minimize the times a recursive function calls itself. 
 the smaller problem is called a subproblem.
 
 ## Overlapping Subproblems
+The Fibonacci sequence is a list of numbers like: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55…infinity<br/>
+it begins with 0, and 1, then each number is the sum of the previous two numbers. The function will be as follows:
+```
+func fib(_ number: Int) {
+  if number == 0 || number == 1 {
+    return number
+  } else {
+    return fib(number - 2) + fib(number - 1)
+  }
+}
+```
