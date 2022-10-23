@@ -178,3 +178,4 @@ func fib(_ number: Int) {
   }
 }
 ```
+Let say we pass 6 as fib(6), it will call fib(4) and fib(5), Then fib(5) will call fib(3) and fib(4). With the number increase, the time of square increase as well. The time complexity will be O(2<sup>N</sup>)
