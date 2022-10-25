@@ -150,11 +150,11 @@ factorial of 4 is:<br/>
 So we can write the function as below:
 ```
 func factorial(_ number: Int) {
-    if nubmer == 1 {
-        return 1
-    } else {
-        return number * factorial(number - 1)
-    }
+  if nubmer == 1 {
+    return 1
+  } else {
+    return number * factorial(number - 1)
+  }
 }
 ```
 # 12. Dynamic Programming
@@ -170,7 +170,7 @@ the smaller problem is called a subproblem.
 The Fibonacci sequence is a list of numbers like: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55…infinity<br/>
 it begins with 0, and 1, then each number is the sum of the previous two numbers. The function will be as follows:
 ```
-func fib(_ number: Int) {
+func fib(_ number: Int) -> Int {
   if number == 0 || number == 1 {
     return number
   } else {
@@ -179,3 +179,17 @@ func fib(_ number: Int) {
 }
 ```
 Let say we pass 6 as fib(6), it will call fib(4) and fib(5), Then fib(5) will call fib(3) and fib(4). With the number increase, the time of square increase as well. The time complexity will be O(2<sup>N</sup>)
+
+## Dynamic Programming through Memoization
+There is a solution for the previous section, we can pass the second parameter as memorization data which is going to store the result in a dictionary.
+```
+func fib2(_ number: Int, memo: inout [Int: Int]) -> Int {
+  if number == 0 || number == 1 {
+    return number
+  }
+  if memo[number] == nil {
+    memo[number] = fib2(number - 2, memo: &memo) + fib2(number - 1, memo: &memo)
+  }
+  return memo[number]!
+}
+```
