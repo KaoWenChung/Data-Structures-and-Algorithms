@@ -210,4 +210,7 @@ func fib(_ number: Int) -> Int {
   return b
 }
 ```
+In this function, we loop once the range of number. The time complexity is O(N).
 ## Memoization vs. Bottom-Up
+Even though the time complexity of both Memoization and Bottom-Up are the same, we should know about recursive function, the computer needs to keep track of all the calls in a call stack, which consume memory. The memorization also requires the usage of a hash table which takes up additional space.<br/>
+Generally speaking, going bottom-up is often the better choice unless the recursive function is more intuitive.
