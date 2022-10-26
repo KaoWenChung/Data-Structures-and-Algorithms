@@ -193,3 +193,20 @@ func fib2(_ number: Int, memo: inout [Int: Int]) -> Int {
   return memo[number]!
 }
 ```
+## Dynamic Programming through Going Bottom-Up
+Besides the recursive function, we can also use a bottom-up approach to solve the previous problem.
+```
+func fib(_ number: Int) -> Int {
+  if number == 0 {
+    return 0
+  }
+  var a = 0
+  var b = 1
+  for _ in 1 ..< number {
+    var tempSum = a + b
+    a = b
+    b = tempSum
+  }
+  return b
+}
+```
