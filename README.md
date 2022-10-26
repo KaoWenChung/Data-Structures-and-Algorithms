@@ -193,7 +193,7 @@ func fib2(_ number: Int, memo: inout [Int: Int]) -> Int {
   return memo[number]!
 }
 ```
-## Dynamic Programming through Going Bottom-Up
+## Bottom-Up Fibonacci
 Besides the recursive function, we can also use a bottom-up approach to solve the previous problem.
 ```
 func fib(_ number: Int) -> Int {
@@ -210,3 +210,4 @@ func fib(_ number: Int) -> Int {
   return b
 }
 ```
+## Memoization vs. Bottom-Up
