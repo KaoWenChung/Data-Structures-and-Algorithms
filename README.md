@@ -214,3 +214,26 @@ In this function, we loop once the range of number. The time complexity is O(N).
 ## Memoization vs. Bottom-Up
 Even though the time complexity of both Memoization and Bottom-Up are the same, we should know about recursive function, the computer needs to keep track of all the calls in a call stack, which consume memory. The memorization also requires the usage of a hash table which takes up additional space.<br/>
 Generally speaking, going bottom-up is often the better choice unless the recursive function is more intuitive.
+
+## Exercises
+1. Improve the function below:
+```
+func add_until_100(_ array: [Int]) -> Int {
+    guard !array.isEmpty else { return 0 }
+    if array.first! + add_until_100(Array(array[1...array.count - 1])) > 100 {
+        return add_until_100(Array(array[1...array.count - 1]))
+    }
+    return array.first! + add_until_100(Array(array[1...array.count - 1]))
+}
+```
+Answer:
+```
+func add2_until_100(_ array: [Int]) -> Int {
+    guard !array.isEmpty else { return 0 }
+    let tempValue = add_until_100(Array(array[1...array.count - 1]))
+    if array.first! + tempValue > 100 {
+        return tempValue
+    }
+    return array.first! + tempValue
+}
+```
