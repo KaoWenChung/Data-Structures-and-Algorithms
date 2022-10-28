@@ -219,21 +219,21 @@ Generally speaking, going bottom-up is often the better choice unless the recurs
 1. Improve the function below:
 ```
 func add_until_100(_ array: [Int]) -> Int {
-    guard !array.isEmpty else { return 0 }
-    if array.first! + add_until_100(Array(array[1...array.count - 1])) > 100 {
-        return add_until_100(Array(array[1...array.count - 1]))
-    }
-    return array.first! + add_until_100(Array(array[1...array.count - 1]))
+  guard !array.isEmpty else { return 0 }
+  if array.first! + add_until_100(Array(array[1...array.count - 1])) > 100 {
+    return add_until_100(Array(array[1...array.count - 1]))
+  }
+  return array.first! + add_until_100(Array(array[1...array.count - 1]))
 }
 ```
 Answer:
 ```
 func add2_until_100(_ array: [Int]) -> Int {
-    guard !array.isEmpty else { return 0 }
-    let tempValue = add_until_100(Array(array[1...array.count - 1]))
-    if array.first! + tempValue > 100 {
-        return tempValue
-    }
-    return array.first! + tempValue
+  guard !array.isEmpty else { return 0 }
+  let tempValue = add_until_100(Array(array[1...array.count - 1]))
+  if array.first! + tempValue > 100 {
+    return tempValue
+  }
+  return array.first! + tempValue
 }
 ```
