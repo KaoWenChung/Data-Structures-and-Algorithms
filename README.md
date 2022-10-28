@@ -254,3 +254,20 @@ func golomb2(_ number: Int, memo: inout [Int: Int]) -> Int {
   return memo[number]!
 }
 ```
+3. Use memoization to improve its efficiency
+```
+func unique_paths(_ rows: Int, _ columns: Int) -> Int {
+  if rows == 1 || columns == 1 { return 1 }
+  return unique_paths(rows - 1, columns) + unique_paths(rows, columns - 1)
+}
+```
+Answer:
+```
+func unique_paths2(_ rows: Int, _ columns: Int, memo: inout [[Int]: Int]) -> Int {
+  if rows == 1 || columns == 1 { return 1 }
+  if memo[[rows, columns]] == nil {
+    memo[[rows, columns]] = unique_paths2(rows - 1, columns, memo: &memo) + unique_paths2(rows, columns - 1, memo: &memo)
+  }
+  return memo[[rows, columns]]!
+}
+```
