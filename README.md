@@ -237,3 +237,20 @@ func add2_until_100(_ array: [Int]) -> Int {
   return array.first! + tempValue
 }
 ```
+2. Use memoization to optimize
+```
+func golomb(_ number: Int) -> Int {
+  if number == 1 { return 1 }
+  return 1 + golomb(number - golomb(golomb(number - 1)))
+}
+```
+Answer:
+```
+func golomb2(_ number: Int, memo: inout [Int: Int]) -> Int {
+  if number == 1 { return 1 }
+  if memo[number] == nil {
+    memo[number] = 1 + golomb2(number - golomb2(golomb2(number - 1, memo: &memo), memo: &memo), memo: &memo)
+  }
+  return memo[number]!
+}
+```
