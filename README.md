@@ -271,3 +271,12 @@ func unique_paths2(_ rows: Int, _ columns: Int, memo: inout [[Int]: Int]) -> Int
   return memo[[rows, columns]]!
 }
 ```
+# 13. Recursive Algorithms for Speed
+## Partitioning
+To partition is to take a random value from an array, which is called "pivot", and then let every number that is less than the pivot ends up on the left, every number that is greater than the pivot ends up to the right.
+Step1. pick the rightmost one in the array as the pivot.
+Step2. We then assign "pointers", one is the leftmost, and one is the rightmost excluding the pivot itself.
+Step3. The left pointer continuously moves one cell to the right until it reaches the value which is greater than or equal to the pivot, and then stops.
+Step4. The right pointer continuously moves the cell to the left until it reaches a value that is less than or equal to the pivot, and then stops. It will also stop when it reaches the beginning of the array.
+Step5. Once the right pointer stops. If the left pointer reaches the right pointer. We go to step 6. Otherwise, we swap the values that the left and right pointers are pointing to and then go back to stap 3, 4, 5.
+Step6. Finally, we swap the pivot with the value that the left pointer is pointing to.
