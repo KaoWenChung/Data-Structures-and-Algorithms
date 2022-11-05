@@ -280,3 +280,30 @@ Step3. The left pointer continuously moves one cell to the right until it reache
 Step4. The right pointer continuously moves the cell to the left until it reaches a value that is less than or equal to the pivot, and then stops. It will also stop when it reaches the beginning of the array.
 Step5. Once the right pointer stops. If the left pointer reaches the right pointer. We go to step 6. Otherwise, we swap the values that the left and right pointers are pointing to and then go back to stap 3, 4, 5.
 Step6. Finally, we swap the pivot with the value that the left pointer is pointing to.
+``` SortableArray {
+    private(set) var attrArray: [Int]
+    init(_ array: [Int]) {
+        attrArray = array
+    }
+    func partition(leftPointer: inout Int, rightPointer: inout Int) {
+        var pivotIndex = rightPointer
+        var pivot = attrArray[pivotIndex]
+        rightPointer -= 1
+        while true {
+            while attrArray[leftPointer] < pivot {
+                leftPointer += 1
+            }
+            while attrArray[rightPointer] > pivot {
+                rightPointer -= 1
+            }
+            if leftPointer >= rightPointer {
+                break
+            } else {
+                (attrArray[leftPointer], attrArray[rightPointer]) = (attrArray[rightPointer], attrArray[leftPointer])
+                leftPointer += 1
+            }
+        }
+        (attrArray[leftPointer], attrArray[pivotIndex]) = (attrArray[pivotIndex], attrArray[leftPointer])
+    }
+}
+```
