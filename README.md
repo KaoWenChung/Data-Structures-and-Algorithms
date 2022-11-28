@@ -280,7 +280,8 @@ Step3. The left pointer continuously moves one cell to the right until it reache
 Step4. The right pointer continuously moves the cell to the left until it reaches a value that is less than or equal to the pivot, and then stops. It will also stop when it reaches the beginning of the array.
 Step5. Once the right pointer stops. If the left pointer reaches the right pointer. We go to step 6. Otherwise, we swap the values that the left and right pointers are pointing to and then go back to stap 3, 4, 5.
 Step6. Finally, we swap the pivot with the value that the left pointer is pointing to.
-``` SortableArray {
+```
+SortableArray {
     private(set) var attrArray: [Int]
     init(_ array: [Int]) {
         attrArray = array
@@ -305,5 +306,19 @@ Step6. Finally, we swap the pivot with the value that the left pointer is pointi
         }
         (attrArray[leftPointer], attrArray[pivotIndex]) = (attrArray[pivotIndex], attrArray[leftPointer])
     }
+}
+```
+# 14. Node-Based Data Structures
+## Linked Lists
+Like an array, a linked list is a data structure that represents a list of items. While on surface, arrays and linked lists seems like act quite similarly, there are big differences between them.<br/>
+Linked list contains a connected data that is dispersed throughout memory are known as nodes. Each node also comes with a little extra information, namely, the memory address of the next node in the list.<br/>
+Implementing a Linked List
+```
+class Node {
+  let data: AnyObject
+  var nextNode: Node?
+  init(data: AnyObject) {
+    self.data = data
+  }
 }
 ```
